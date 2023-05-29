@@ -10,7 +10,7 @@
 
 - 一台 Linux 服务器，建议 国外服务器，或者任何可以长期运行程序的PC设备
 - OpenAI 账号 以及生成的 `SECRET KEY` ，本文对账号注册以及 key 生成不做赘述，读者请自行搜索解决方案。
-- 一个微信公众号
+- 一个微信公众号，熟悉微信公众号后台开发配置，项目运行成功后需要在后台配置项目请求的url。
 
 > - 注：OpenAI 的域名 `https://api.openai.com` 在国内由于某种原因可能无法访问，读者需要自己解决 API 访问不通的问题。介绍一种简单的国内代理搭建方式
 
@@ -27,10 +27,15 @@ listen: :8899
 proxy:
 # 微信公众号相关配置
 officialAccountConfig:
+  # 微信公众号后台获取
   appID:
+  # 微信公众号后台获取
   appSecret:
+  # 微信公众号后台获取
   token:
+  # 微信公众号后台获取
   encodingAESKey:
+  # 影响滚动返回结果 (5s-13s) 
   timeout: 7
 
 openai:
